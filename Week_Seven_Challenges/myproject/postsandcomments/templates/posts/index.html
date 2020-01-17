@@ -1,0 +1,10 @@
+<h1> Posts </h1>
+{% if post_text %}
+    <ul>
+        {% for post in post_text %}
+            <li><a href="{% url 'detail' post.id %}">{{ post.post_text }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No posts are available.</p>
+{% endif %}

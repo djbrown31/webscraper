@@ -1,0 +1,7 @@
+<h1> Details about Post {{ post.title }} </h1>
+<h2> {{ post.comment_text }} </h2>
+<ul>
+    {% for comment in comments %}
+        <li>{{ comment.comment_text }}</li>
+    {% endfor %}
+</ul>
